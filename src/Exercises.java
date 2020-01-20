@@ -14,12 +14,18 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
+		if (values == null || values.length < n.length || n < 1) {
+			return false; 
+		}
 		// write your code here
 
 		return null;	// default return value to ensure compilation
 	}
 
 	public int difference(int[] numbers) {
+		if (numbers == null || numbers < 1) {
+			return false; 
+		}
 		// write your code here
 
 		return -1;		// default return value to ensure compilation

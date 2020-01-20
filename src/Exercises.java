@@ -86,6 +86,21 @@ public class Exercises {
 	}
 
 	public int clumps(String[] values) {
+		if (values == null){
+			return -1;
+		}
+		
+		boolean containsNull = false;
+		for (int i = 0; i < values.length; i++){
+			if (values[i] == null){
+				containsNull = true;
+			}
+		}
+		
+		if (containsNull) {
+			return -1; 
+		}
+		
 		// write your code here
 
 		return -1;		// default return value to ensure compilation

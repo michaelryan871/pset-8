@@ -50,12 +50,18 @@ public class Exercises {
 	}
 
 	public boolean increasing(int[] numbers) {
+		if (numbers == null || numbers < 3){
+			return false;
+		}
 		// write your code here
 
 		return false;	// default return value to ensure compilation
 	}
 
 	public boolean everywhere(int[] numbers, int x) {
+		if (values == null || values < 1){
+			return false; 
+		}
 		// write your code here
 
 		return false;	// default return value to ensure compilation

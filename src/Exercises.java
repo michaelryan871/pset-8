@@ -68,12 +68,18 @@ public class Exercises {
 	}
 
 	public boolean consecutive(int[] numbers) {
+		if (numbers == null || numbers < 3){
+			return false;
+		}
 		// write your code here
 
 		return false;	// default return value to ensure compilation
 	}
-
+														
 	public boolean balance(int[] numbers) {
+		if (numbers == null || numbers < 2){
+			return false;
+		}
 		// write your code here
 
 		return false;	// default return value to ensure compilation

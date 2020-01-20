@@ -14,7 +14,7 @@ public class Exercises {
 	}
 
 	public String[] endsMeet(String[] values, int n) {
-		if (values == null || values.length < n.length || n < 1) {
+		if (values == null || values.length < n|| n < 0) {
 			return false; 
 		}
 		// write your code here
@@ -32,12 +32,18 @@ public class Exercises {
 	}
 
 	public double biggest(double[] numbers) {
+		if (numbers == null || numbers < 3 || numbers.length % 2 == 0){
+			return -1; 
+		}
 		// write your code here
 
 		return -1;		// default return value to ensure compilation
 	}
 
 	public String[] middle(String[] values) {
+		if (numbers == null || numbers < 3 || numbers.length % 2 == 0){
+			return null; 
+		}
 		// write your code here
 
 		return null;	// default return value to ensure compilation

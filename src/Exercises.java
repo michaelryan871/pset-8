@@ -65,7 +65,6 @@ public class Exercises {
 
 		int differnce = numMax - numMin;
 		return differnce;
-
 	}
 
 	public double biggest(double[] numbers) {
@@ -129,9 +128,12 @@ public class Exercises {
 }
 /*
 	public boolean everywhere(int[] numbers, int x) {
-		if (values == null || values < 1){
+		if (numbers == null || numbers.length < 1){
 			return false;
 		}
+
+		boolean last = false;
+		int gap = 0;
 		// write your code here
 
 		return false;	// default return value to ensure compilation
@@ -154,16 +156,31 @@ public boolean consecutive(int[] numbers) {
 	return false;	// default return value to ensure compilation
 }
 
-/*
+
 	public boolean balance(int[] numbers) {
-		if (numbers == null || numbers < 2){
+		if (numbers == null || numbers.length < 2){
 			return false;
 		}
 		// write your code here
+		for (int i = 0; i < numbers.length - 1; i++) {
+			int numOne = 0;
+			int numTwo = 0;
 
+			for (int x = i; x >= 0; x--) {
+				numOne = numOne + numbers[x];
+			}
+
+			for (int k = i + 1; k < numbers.length; k++) {
+				numTwo = numTwo + numbers[k];
+			}
+
+			if (numOne == numTwo) {
+				return true;
+			}
+		}
 		return false;	// default return value to ensure compilation
 	}
-
+/*
 	public int clumps(String[] values) {
 		if (values == null){
 			return -1;

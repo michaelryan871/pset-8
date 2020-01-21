@@ -126,19 +126,38 @@ public class Exercises {
 		}
 	return false;	// default return value to ensure compilation
 }
-/*
+
 	public boolean everywhere(int[] numbers, int x) {
 		if (numbers == null || numbers.length < 1){
 			return false;
 		}
 
-		boolean last = false;
-		int gap = 0;
 		// write your code here
 
-		return false;	// default return value to ensure compilation
+		boolean lastPlace = false;
+		int gap = 0;
+
+		for (int i = 0; i < numbers.length; i++) {
+			if (numbers[i] == x) {
+				lastPlace = true;
+				gap = 0;
+			} else {
+				if (i == 1 && lastPlace == false) {
+					return false;
+				} else if (lastPlace == false) {
+					gap++;
+				}
+				lastPlace = false;
+			}
+
+			if (gap == 2) {
+				return false;
+			}
+		}
+
+		return true;
 	}
-*/
+
 public boolean consecutive(int[] numbers) {
 
 	// write your code here
@@ -198,7 +217,7 @@ public boolean consecutive(int[] numbers) {
 		}
 
 		// write your code here
-		
+
 			boolean same = false;
 			boolean lastSame = false;
 			String last = "";

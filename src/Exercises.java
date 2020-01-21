@@ -95,16 +95,25 @@ public class Exercises {
 
 		return false;	// default return value to ensure compilation
 	}
+*/
+public boolean consecutive(int[] numbers) {
 
-	public boolean consecutive(int[] numbers) {
-		if (numbers == null || numbers < 3){
-			return false;
-		}
-		// write your code here
-
-		return false;	// default return value to ensure compilation
+	// write your code here
+	if (numbers == null || numbers.length < 3) {
+		return false;
 	}
 
+	for (int i = 1; i < numbers.length - 1; i++) {
+		if (numbers[i - 1] % 2 == 0 && numbers[i] % 2 == 0 && numbers[i + 1] % 2 == 0) {
+			return true;
+		} else if (numbers[i - 1] % 2 == 1 && numbers[i] % 2 == 1 && numbers[i + 1] % 2 == 1) {
+			return true;
+		}
+	}
+	return false;	// default return value to ensure compilation
+}
+
+/*
 	public boolean balance(int[] numbers) {
 		if (numbers == null || numbers < 2){
 			return false;

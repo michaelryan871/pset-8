@@ -180,7 +180,7 @@ public boolean consecutive(int[] numbers) {
 		}
 		return false;	// default return value to ensure compilation
 	}
-/*
+
 	public int clumps(String[] values) {
 		if (values == null){
 			return -1;
@@ -198,8 +198,25 @@ public boolean consecutive(int[] numbers) {
 		}
 
 		// write your code here
+		
+			boolean same = false;
+			boolean lastSame = false;
+			String last = "";
+			int clumps = 0;
 
-		return -1;		// default return value to ensure compilation
-	}
-	*/
+			for (int i = 0; i < values.length; i++) {
+				if (last.equals(values[i])) {
+					same = true;
+					if (lastSame != true) {
+						clumps++;
+					}
+				} else {
+					same = false;
+				}
+				last = values[i];
+				lastSame = same;
+			}
+
+			return clumps;
+		}
 }

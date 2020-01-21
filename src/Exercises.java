@@ -41,12 +41,31 @@ public class Exercises {
 	}
 
 	public int difference(int[] numbers) {
+
+		// write your code here
 		if (numbers == null || numbers.length < 1) {
 			return -1;
 		}
-		// write your code here
 
-		return -1;		// default return value to ensure compilation
+		int numMax = 0;
+		int numMin = 0;
+
+		for (int i = 0; i < numbers.length; i++) {
+			if (i == 0) {
+				numMax = numbers[i];
+				numMin = numbers[i];
+			}
+			if (numMax < numbers[i]) {
+				numMax = numbers[i];
+			}
+			if (numMin > numbers[i]) {
+				numMin = numbers[i];
+			}
+		}
+
+		int differnce = numMax - numMin;
+		return differnce;
+
 	}
 
 	public double biggest(double[] numbers) {
@@ -69,10 +88,9 @@ public class Exercises {
 
 				String empty[] = new String[0];
 
-				if (values == null || values.length < 3 || values.length%2 == 0) {
+				if (values == null || values.length < 3 || values.length % 2 == 0) {
 					return empty;
 				}
-
 
 				boolean containsNull = false;
 				for (int i = 0; i < values.length; i++) {

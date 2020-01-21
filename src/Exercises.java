@@ -63,17 +63,40 @@ public class Exercises {
 
 			// return -1;		// default return value to ensure compilation
 		}
-/*
-	public String[] middle(String[] values) {
-		if (values == null || values.length < 3 || values.length % 2 == 0) {
-			return empty;
+
+		public String[] middle(String[] values) {
+				// write your code here
+
+				String empty[] = new String[0];
+
+				if (values == null || values.length < 3 || values.length%2 == 0) {
+					return empty;
+				}
 
 
+				boolean containsNull = false;
+				for (int i = 0; i < values.length; i++) {
+					if (values[i] == null) {
+						containsNull = true;
+					}
+				}
 
-		// return null;	// default return value to ensure compilation
-	}
-}
-*/
+				if (containsNull) {
+					return empty;
+				}
+
+
+				int half = values.length / 2;
+				int first = half - 1;
+				int last = half + 1;
+
+				String[] result = {values[first], values[half], values[last]};
+
+				return result;
+
+				// return null;	// default return value to ensure compilation
+			}
+
 	public boolean increasing(int[] numbers) {
 		if (numbers == null || numbers.length < 3){
 			return false;

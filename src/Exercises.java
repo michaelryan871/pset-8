@@ -39,7 +39,7 @@ public class Exercises {
 
 		// return null;	// default return value to ensure compilation
 	}
-/*
+
 	public int difference(int[] numbers) {
 		if (numbers == null || numbers.length < 1) {
 			return -1;
@@ -63,8 +63,7 @@ public class Exercises {
 
 			// return -1;		// default return value to ensure compilation
 		}
-
-
+/*
 	public String[] middle(String[] values) {
 		if (values == null || values.length < 3 || values.length % 2 == 0) {
 			return empty;
@@ -73,16 +72,21 @@ public class Exercises {
 
 		// return null;	// default return value to ensure compilation
 	}
-/*
+}
+*/
 	public boolean increasing(int[] numbers) {
-		if (numbers == null || numbers < 3){
+		if (numbers == null || numbers.length < 3){
 			return false;
 		}
-		// write your code here
 
-		return false;	// default return value to ensure compilation
-	}
-
+		for (int i = 1; i < numbers.length - 1; i ++) {
+			if (numbers[i-1] < numbers[i] && numbers[i] < numbers [i+1]){
+				return true;
+			}
+		}
+	return false;	// default return value to ensure compilation
+}
+/*
 	public boolean everywhere(int[] numbers, int x) {
 		if (values == null || values < 1){
 			return false;
